@@ -17,5 +17,9 @@ export default defineConfig({
       polyfill: false,
     },
     plugins: [tailwindcss()]
-  }
+  },
+
+  build: {
+      inlineStylesheets: "always",
+  },
 });
