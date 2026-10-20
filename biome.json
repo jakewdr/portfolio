@@ -1,0 +1,66 @@
+{
+    "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+    "vcs": {
+        "enabled": false,
+        "clientKind": "git",
+        "useIgnoreFile": false
+    },
+    "files": {
+        "ignoreUnknown": false,
+        "include": ["src/**/**", "astro.config.mts"]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineEnding": "lf"
+    },
+    "organizeImports": {
+        "enabled": true
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "recommended": true,
+            "nursery": {
+                "useSortedClasses": {
+                    "level": "warn",
+                    "fix": "safe",
+                    "options": {}
+                },
+                "noCommonJs": "warn"
+            }
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "double"
+        }
+    },
+    "overrides": [
+        {
+            "include": ["src/*.astro"],
+            "formatter": {
+                "enabled": true,
+                "indentStyle": "space",
+                "indentWidth": 4
+            },
+            "linter": {
+                "rules": {
+                    "style": {
+                        "useConst": "off",
+                        "useImportType": "off"
+                    },
+                    "nursery": {
+                        "useSortedClasses": {
+                            "level": "warn",
+                            "fix": "unsafe",
+                            "options": {}
+                        },
+                        "noCommonJs": "warn"
+                    }
+                }
+            }
+        }
+    ]
+}
