@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 :root {
-    background: #fff;
-    color: #000;
+    background: #1e1e2e;
+    color: #bac2de;
     text-rendering: optimizeSpeed;
 }
 
 @theme {
     --font-google-sans-code: Google Sans Code;
+    --color-offwhite: #bac2de;
+    --color-background-blue: #1e1e2e;
 }
 
 @font-face {
